@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { Form, Button } from 'semantic-ui-react';
 import Validator from 'validator';
 import InlineError from '../messages/InlineError';
 
-class LoginFormg extends Component {
+class LoginForm extends Component {
 	state = {
 		data: {
 			email: '',
@@ -67,4 +68,8 @@ class LoginFormg extends Component {
     }
 }
 
-export default LoginFormg;
+LoginForm.propTypes = {
+	submit: PropTypes.func
+};
+
+export default LoginForm;
